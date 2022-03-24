@@ -17,7 +17,7 @@ const MapPage = () => {
 
         const getVenues = async () => {
             const resp = await fetch(
-                "http://localhost:8080/api/burgerjoints"
+                "https://qm-kv.herokuapp.com/api/burgerjoints"
             );
             const venuesResp = await resp.json();
             await setVenues(venuesResp);
@@ -31,7 +31,7 @@ const MapPage = () => {
     const findNewBurgerJoints = async () => {
         await setLoadingShow(true);
         const resp = await fetch(
-            "http://localhost:8080/api/update",
+            "https://qm-kv.herokuapp.com/api/update",
             {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'}
