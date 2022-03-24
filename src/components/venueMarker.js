@@ -18,7 +18,7 @@ const VenueMarker = (props) => {
     return(
         <Marker position={[venue.longitude, venue.latitude]}>
             <Popup>
-                <Card style={{maxWidth: "20vw", height: "auto", border: 'none' }}>
+                <Card style={{ border: 'none' }}>
                     {venue.photoUrl &&  <Card.Img variant="top" src={venue.photoUrl} alt={venue.name + " food picture"} /> }
                     <Card.Body>
                         <Card.Title>{venue.name}</Card.Title>
